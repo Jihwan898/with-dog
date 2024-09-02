@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Pretendard';
+    line-height: 1.5;
+    color: black;
+    font-size: 21px;
+    min-width: 1320px;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 탑메뉴 */
+.top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 1s;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(101, 197, 218);
+}
+
+/* 자바스크립트로 추가될 클래스 */
+.nav-up {
+    /* 헤더 높이만큼 주기 */
+    top: -121px;
+
+
+}
+
+.top_in {
+    width: 90%;
+    margin: auto;
+   
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.top_menu {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+
+}
+.top_logo{
+    height: 40px;
+    padding-top: 15px;
+}
+
+.t_left {
+    font-family: 'BMJua';
+    font-size: 25px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 30px 0 30px;
+    text-align: center;
+    width: 600px;
+    /* background-color: rgb(0, 255, 38); */
+    
+
+}
+
+.t_left>li{
+position: relative;
+/* background-color: bisque; */
+}
+.t_left>li>a{
+    display: block;
+    padding: 5px 20px;
+    color: rgb(0, 0, 0);
+}
+.t_left>li:hover>a{
+    background-color:rgb(101, 197, 218) ;
+    border-radius: 5px 5px 0 0;
+    color: white;
+}
+.sub{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250%;
+    background: rgb(101, 197, 218);
+    border-radius: 5px;
+    display: none;
+}
+.t_left > li:hover .sub {
+    display: block;
+}
+
+.sub>li>a{
+    display: block;
+    color: white;
+    padding: 7px 30px 5px 30px;
+}
+.sub>li>a:hover{
+    background: rgb(253, 128, 142);
+    border-radius: 5px;
+
+
+}
+.search-button {
+    border: none;
+}
+
+.t_right {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.t_right li {
+    margin: 27px 10px 0px 10px;
+}
+.t_right li a img {
+    height: 26px;
+    filter: brightness(100) invert(1); /* 이미지가 화이트로 표시되도록 필터 적용 */
+  }
+  .t_right li a:hover img {
+    filter: none;
+  }
+
+  .t_right>.s_box {
+    margin: 22px 10px 0;
+
+}
+
+.t_right input {
+    border: rgb(0, 0, 0) 2px solid;
+    background: rgba(255, 255, 255, 0.48) url(../images/m_top/search_icon_back.png) no-repeat 95% 50%;
+    padding: 5px;
+    border-radius: 7px;
+}
+.t_right input:hover{
+    border: #64D8FC 2px solid;
+    background: none;
+}
+/* top div 끝*/
+
+/* 메인베너 슬라이드 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 푸터 */
+
+footer{
+    background: rgb(100, 100, 100);
+    width: 100%;
+    padding-top: 60px;
+    color: white;
+    padding-bottom: 60px;
+    
+}
+.footer_in{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+  
+}
+.footer_l{
+    display: flex;
+    flex-direction: column; /* 요소들을 수직으로 배치 */
+
+}
+.footer_l img{
+    display: block;
+    width: 162px;
+    height: 50px;
+}
+
+.footer_r .icon a{
+margin-left: 10px;
+}
+
+.footer_l ul{
+    display: flex;
+    margin-top: 20px; /* 이미지와 리스트 사이에 여백 추가 */
+}
+
+.footer_l ul li a{
+    color: white;
+}
+.footer_l ul li a:hover{
+    color: #64D8FC
+}
+.footer_r{
+    width: 350.3px;
+}
+.footer_r .icon{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.footer_r .icon a:hover{
+    opacity: 0.5;
+}
+
+.footer_p1{
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.all{
+    margin-top: 30px;
+}
+/* 탑버튼 */
+.top_button1 {
+    position: fixed;
+    bottom: 50px;
+    right:50px ;
+    display: none;
+    z-index: 1;
+    width: 56;
+    transition: transform 0.3s ease; 
+}
+.top_button1:hover{
+    transform: scale(1.2); /* 이미지 크기를 1.2배로 확대 */
+}
+.top_button2:hover{
+    transform: scale(1.2); /* 이미지 크기를 1.2배로 확대 */
+}
+.top_button2{
+    position: fixed;
+    bottom: 120px;
+    right:50px ;
+    display: none;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
