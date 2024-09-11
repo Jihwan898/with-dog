@@ -248,9 +248,21 @@ ul {
     /* height: 200px; */
 }
 
-.border_icon {
-    display: flex;
-    gap: 20px;
+/* 찜버튼 */
+.heart1 {
+    position: absolute;
+    left: 43px;
+    opacity: 0;
+}
+
+.on {
+    opacity: 1;
+    /* 보이도록 설정 */
+}
+
+.off {
+    opacity: 0;
+    /* 숨기기 */
 }
 
 .border_content {
@@ -262,14 +274,41 @@ ul {
     /* 세로 중앙 정렬 */
 }
 
-select {
-    width: 480px;
-    height: 30px;
+
+
+
+.border_icon {
+    display: flex;
+    gap: 20px;
+    position: relative;
 }
 
-option .price {
-    padding-left: 50px;
+.border_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.price {
+    font-size: 15px;
+    border: 1.5px solid black;
+    padding: 3px 0 3px 0;
+    position: relative;
+}
+
+.sub1 {
+    font-size: 15px;
+    display: none;
+    position: absolute;
+    left: -1px;
+    top: 30px;
+    background-color: white;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    border: 1.5px solid black;
+    width: 488px;
+}
+
 
 /* 가격 띄우기 */
 .select_1,
@@ -335,15 +374,19 @@ option .price {
 .gallery_bg {
     width: 100%;
     height: 400px;
-    background-color: rgb(240, 240, 240);
+    /* background-color: rgb(240, 240, 240); */
+    background-color: rgba(32, 203, 255, 0.041);
+border-top: 3px solid rgb(206, 206, 206);
+border-bottom: 3px solid rgb(170, 170, 170);
     position: relative;
     margin-bottom: 80px;
 }
 
 .gallery_bg h2 {
+    
     position: absolute;
     top: 35%;
-    left: 30%;
+    left: 25%;
 }
 
 .gallery {
@@ -396,7 +439,7 @@ option .price {
 /*이동버튼 영역 색상 바꾸기*/
 .gallery .swiper-button-prev,
 .gallery .swiper-button-next {
-    color: pink;
+    color: rgb(77, 77, 77);
 }
 
 /*이동버튼 영역 호버 시 색상 바꾸기*/
@@ -429,7 +472,7 @@ option .price {
 .banner_mini {
     width: 1400px;
     margin: auto;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .banner_mini img {
@@ -443,7 +486,7 @@ option .price {
 }
 
 .dcontent_button {
-    width:100%;
+    width: 400px;
     margin: auto;
 
 
@@ -460,9 +503,43 @@ option .price {
     font-size: 26px;
     padding: 5px 0;
 }
+.DP_nav{
+    border-bottom: rgb(179, 179, 179) 2px solid;
+}
+.DP_nav_in{
+    width: 930px;
+    margin: auto;
+    display: flex;
+justify-content: space-between;
+    }
+.DP_nav_in .DP_a1{
+    padding: 0 60px;    
+    display: flex;
+    text-align: center;
+    font-family: 'BMJua';
+    font-size: 25px;
+    font-weight: 500;
+    border-bottom: 3px solid rgb(101, 197, 218);
+}
+.DP_nav_in .DP_a2{
+    padding: 0 80px;    
+    display: flex;
+    text-align: center;
+    font-family: 'BMJua';
+    font-size: 25px;
+    font-weight: 500;
+    border-bottom: 3px solid rgb(101, 197, 218);
+}
+.DP_nav_in .DP_a2:hover{
+    border-bottom: 3px solid rgb(253, 128, 142);
+}
+.DP_nav_in .DP_a1:hover{
+    border-bottom: 3px solid rgb(253, 128, 142);
+}
 
 /* 상세 페이지 */
 .Detailed_Page {
+    padding-top: 40px;
     margin: auto;
     width: 950px;
 }
@@ -487,11 +564,12 @@ option .price {
 .dcontent_review h2 {
     font-family: 'BMJua';
     font-size: 25px;
+    font-weight: 500;
     margin: auto;
     margin-top: 50px;
     width: 1320px;
     border-bottom: 3px solid #EC6374;
-    font-weight: 500;
+    
 
 }
 
@@ -555,92 +633,315 @@ option .price {
     border-left: 2px solid rgb(160, 160, 160);
     height: 150px;
 }
-.star_r{
+
+.star_r {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     width: 0px;
     height: 140px;
     margin: 5px 10px 0 150px;
-    
+
 }
-.star_r img{
+
+.star_r img {
     height: 20px;
 }
-.star_l{
-   margin-top: 9px;
-width: 485px;
-height: 10px;
+
+.star_l {
+    margin-top: 9px;
+    width: 485px;
+    height: 10px;
 }
-.star_l img{
+
+.star_l img {
     display: block;
     margin: 0px 0 17px 0;
 }
 
 /* 포토리뷰 */
-.photo_review{
+.photo_review {
     width: 1214px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
-.photo_review_text{
+
+.photo_review_text {
     width: 1214px;
     margin-top: 10px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
-} 
-.photo_review_text p{
+}
+
+.photo_review_text p {
     font-size: 17px;
 }
-.photo_review_text a{
+
+.photo_review_text a {
     font-size: 17px;
 }
-.photo_review_img{
+
+.photo_review_img {
     padding-top: 20px;
     margin: auto;
-    width: 1000px;
+    width: 1100px;
     display: flex;
     justify-content: space-around;
 }
 
-/* sequence div */
-.sequence{
+
+/*  */
+.sequence {
+    height: 70px;
     margin-top: 30px;
-    border-top: 2px solid rgb(160, 160, 160);
-    border-bottom: 2px solid rgb(160, 160, 160);
+    margin-bottom: 30px;
+    border-top: 3px solid #EC6374;
+    border-bottom: 3px solid rgb(160, 160, 160);
+    display: flex;
+    /* 최신순, 추천수, 커스텀 셀렉트를 가로로 배치 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    gap: 20px;
+    /* 각 요소 간 간격 */
 }
-.review_1{
+
+.sequence a {
+    margin-top: 30px;
+    display: inline-flex;
+    font-size: 17px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.custom-select {
+    position: relative;
+    /* 옵션 목록이 선택 영역 하단에 뜨도록 설정 */
+    width: 150px;
+    /* 커스텀 셀렉트 박스의 너비 */
+    cursor: pointer;
+    /* 마우스 커서를 포인터로 변경 */
+}
+
+.sequence>p {
+    margin-top: 30px;
+    font-size: 17px;
+    margin-right: -15px;
+}
+
+.selected {
+    margin-top: 30px;
+    height: 23px;
+    padding: 0px 0 3px 10px;
+    /* 내부 여백 */
+    background-color: #f0f0f0;
+    /* 배경색 */
+    border: 1px solid #ccc;
+    /* 테두리 */
+    border-radius: 3px;
+}
+
+.options {
+    display: none;
+    /* 기본적으로 옵션 목록을 숨김 */
+    position: absolute;
+    /* 선택 영역 하단에 위치 */
+    top: 100%;
+    /* 상단으로부터 100% 떨어진 위치 (선택 영역 바로 밑) */
+    left: 0;
+    /* 왼쪽 정렬 */
+    background-color: white;
+    /* 배경색 */
+    border: 1px solid #ccc;
+    /* 테두리 */
+    width: 100%;
+    /* 옵션 목록의 너비를 선택 영역과 동일하게 */
+    z-index: 10;
+    /* 다른 요소 위에 표시되도록 설정 */
+}
+
+.option {
+    padding: 10px;
+    /* 각 옵션의 내부 여백 */
+    display: flex;
+    /* 옵션 내용을 가로로 배치 */
+    justify-content: flex-start;
+    /* 옵션을 왼쪽 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    cursor: pointer;
+    /* 마우스 커서를 포인터로 변경 */
+}
+
+.option img {
+    /* 이미지의 크기를 그대로 유지하면서 이미지 가운데 정렬 */
+    max-width: 100%;
+    /* 이미지가 옵션의 너비를 넘지 않도록 설정 */
+    height: auto;
+    /* 이미지의 원래 비율을 유지 */
+    display: block;
+    /* 블록 요소로 설정하여 정렬 */
+    justify-content: flex-start;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+    /* 옵션에 마우스를 올렸을 때 배경색 변경 */
+}
+
+.custom-select.open .options {
+    display: block;
+    /* 선택 영역이 열렸을 때 옵션 목록을 표시 */
+}
+
+.sequence input {
+    margin-top: 30px;
+    margin-left: 760px;
+    height: 25px;
+    border-radius: 3px;
+}
+
+/* .sequence input:hover{
+    place
+  } */
+
+/*  */
+.review_1 {
     margin: auto;
     width: 1290px;
     display: flex;
-margin-top: 20px;
-border-top: 2px solid rgb(160, 160, 160) ;
+    margin-top: 20px;
+    border-top: 2px solid rgb(160, 160, 160);
 }
-.review_1_r{
+
+.review_1_r {
     display: flex;
     flex-wrap: wrap;
     width: 200px;
     margin-top: 20px;
     margin-left: 10px;
 }
-.review_1_r img{
+
+.review_1_r img {
     height: 20px;
 }
-.review_1_textbox{
+
+.review_1_r p {
+    margin-top: -5px;
+    margin-left: 7px;
+}
+
+.review_1_textbox {
     margin-top: 20px;
-padding-left: 25px;
+    padding-left: 25px;
     border-left: 2px solid rgb(160, 160, 160);
 }
-.review_end{
+
+.review_end {
     border-bottom: 2px solid rgb(160, 160, 160);
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
 
+.review_1_textbox p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.review_nav {
+    margin-top: 30px;
+    border-top: 3px solid rgb(160, 160, 160);
+    padding-top: 10px;
+}
 
 
+.review_nav_in {
+    margin-top: 10px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
 
+.review_nav_in a {
+    font-size: 19px;
+}
+
+.review_nav_in img {
+    display: block;
+    margin-top: 7px;
+    width: 10px;
+    height: 13px;
+}
+
+.QA {
+    margin-top: 40px;
+    border-bottom: #64D8FC solid 3px;
+    padding-bottom: 40px;
+}
+
+.QA_h1 {
+    font-family: 'BMJua';
+    font-size: 25px;
+    font-weight: 500;
+    border-bottom: 3px solid #64D8FC;
+}
+
+.QA img {
+    margin-left: 30px;
+    margin-top: 4px;
+    margin-right: 10px;
+    width: 14px;
+    height: 16px;
+}
+
+.QA_in {
+    padding-top: 20px;
+    display: flex;
+    width: 1100px;
+    border-bottom: #afafaf solid 2px;
+    margin: auto;
+    height: 50px;
+    position: relative;
+}
+.QA_in_2 .QA_in_A{
+    margin-left: 100px;
+}
+.QA_in_2 {
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    width: 1200px;
+    border-bottom: #afafaf solid 3px;
+    margin: auto;
+    height: 50px;
+}
+.QA p{
+    font-size: 16px;
+}
+.QA_p1{
+    padding-left: 650px;
+}
+.QA_pd1{
+    position: absolute;
+    top: 23px;
+    right: 50px;
+    padding-left: 10%;
+}
+
+.QA_p{
+    padding-left: 600px;
+}
+
+.QA_pd{
+    position: absolute;
+    top: 23px;
+    right: 100px;
+    /* padding-left: 100px; */
+}
+.review_nav2 {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
 
 
 
