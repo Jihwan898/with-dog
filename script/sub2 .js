@@ -86,6 +86,20 @@ $(function () {
 });
 
 
+// 
+document.querySelector('.selected').addEventListener('click', function() {
+  // 선택된 영역을 클릭하면 옵션 목록이 열리도록 .open 클래스를 토글
+  this.parentElement.classList.toggle('open');
+});
+
+document.querySelectorAll('.option').forEach(function(option) {
+  option.addEventListener('click', function() {
+    const selectedImage = this.querySelector('img').outerHTML; // 선택된 옵션의 이미지 HTML을 가져옴
+    document.querySelector('.selected').innerHTML = selectedImage; // 선택된 영역에 이미지를 표시
+    document.querySelector('.custom-select').classList.remove('open'); // 옵션 목록을 다시 숨김
+  });
+});
+
 
 
 
@@ -124,4 +138,33 @@ $(window).scroll(function () {
   } else {
     $('.top_button2').fadeOut();
   }
+});
+
+// 찜하기 버튼
+$(function () {
+  // heart 클릭 시 heart1 나타내기
+  $('.heart').click(function () {
+    $(this).toggleClass('off');  // heart 숨기기
+    $('.heart1').toggleClass('on');  // heart1 나타내기
+  });
+
+  // heart1 클릭 시 다시 heart 나타내기
+  $('.heart1').click(function () {
+    $(this).toggleClass('on');  // heart1 숨기기
+    $('.heart').toggleClass('off');  // heart 나타내기
+  });
+
+// 제품 목록 옵션 선택
+  $('.price').click(function () {
+    $('.sub1').toggle();  // heart1 숨기기
+  });
+
+  $('.sub1 li:nth-child(1)').click(function () {
+    $('.price> span').text('-성장기 강아지 베이비 케어 시리즈 - 2kg +32,000원'); 
+  });
+  
+  $('.sub1 li:nth-child(2)').click(function () {
+    $('.price> span').text('-성장기 강아지 베이비 케어 시리즈 - 4kg +64,000원'); 
+  });
+
 });
